@@ -1,4 +1,4 @@
-﻿using CSUtilities.Attributes;
+using CSUtilities.Attributes;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -84,6 +84,7 @@ internal
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="value"></param>
+	/// <param name="result">The matching enum value when parsing succeeds; otherwise, the default value of T.</param>
 	/// <returns></returns>
 	public static bool TryParseByStringValue<T>(this string value, out T result)
 		where T : Enum

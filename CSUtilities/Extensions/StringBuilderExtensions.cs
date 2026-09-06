@@ -1,4 +1,6 @@
-﻿using System.Linq;
+#nullable enable annotations
+
+using System.Linq;
 
 namespace CSUtilities.Extensions;
 

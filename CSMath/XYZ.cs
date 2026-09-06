@@ -1,4 +1,6 @@
-﻿using System;
+#nullable enable annotations
+
+using System;
 
 namespace CSMath;
 

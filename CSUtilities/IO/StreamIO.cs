@@ -1,4 +1,4 @@
-﻿using CSUtilities.Converters;
+using CSUtilities.Converters;
 using System;
 using System.IO;
 using System.Text;
@@ -67,7 +67,7 @@ internal class StreamIO : IDisposable
 			stream.Position = 0;
 			//Create a copy of the stream to allow seeking
 			byte[] buffer = new byte[stream.Length];
-			stream.Read(buffer, 0, buffer.Length);
+			CSUtilities.Extensions.StreamExtensions.ReadExactly(stream, buffer, 0, buffer.Length);
 			_stream = (Stream)new MemoryStream(buffer);
 			stream.Position = position;
 		}

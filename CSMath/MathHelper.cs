@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CSMath;
 
@@ -120,17 +120,11 @@ public static class MathHelper
 	}
 
 	/// <summary>
-	/// Returns zero if the specified number is within the given threshold of zero; otherwise, returns the original number.
-	/// </summary>
-	/// <remarks>This method is useful for normalizing values that are very close to zero due to floating-point
-	/// precision errors. It can help avoid issues where extremely small values are treated as nonzero in
-	/// calculations.</remarks>
-	/// <param name="number">The value to evaluate for near-zero equivalence.</param>
-	/// <param name="threshold">The tolerance within which the number is considered to be zero. Must be non-negative.</param>
-	/// <returns>Zero if the absolute value of the number is less than or equal to the threshold; otherwise, the original number.</returns>
-	/// <summary>
 	/// Returns a copy of the specified vector with components that are effectively zero replaced by exact zeros.
 	/// </summary>
+	/// <remarks>This method uses <see cref="Epsilon"/> to normalize components that are very close to zero due
+	/// to floating-point precision errors. It can help avoid issues where extremely small values are treated
+	/// as nonzero in calculations.</remarks>
 	/// <typeparam name="T">The type of vector. Must implement the IVector interface and have a parameterless constructor.</typeparam>
 	/// <param name="vector">The vector to process. Components close to zero will be set to zero.</param>
 	/// <returns>A new vector of type T with near-zero components set to zero.</returns>

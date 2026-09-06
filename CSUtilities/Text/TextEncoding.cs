@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Text;
 
 namespace CSUtilities.Text;
@@ -287,7 +287,10 @@ internal partial class TextEncoding : Encoding
 			case Text.CodePage.Xisciipa:
 				break;
 			case Text.CodePage.Utf7:
+				// Preserve the encoding of explicitly tagged legacy CAD data; this is not the default encoding.
+#pragma warning disable SYSLIB0001
 				return Encoding.UTF7;
+#pragma warning restore SYSLIB0001
 			case Text.CodePage.Utf8:
 				return Encoding.UTF8;
 			default:
