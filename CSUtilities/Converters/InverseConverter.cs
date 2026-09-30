@@ -13,55 +13,55 @@ public
 	public byte[] GetBytes(char value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(short value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(ushort value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(int value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(uint value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(long value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(ulong value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(double value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes(float value)
 	{
 		byte[] bytes = BitConverter.GetBytes(value);
-		return InverseConverter.fullInverse(bytes);
+		return fullInverse(bytes);
 	}
 
 	public byte[] GetBytes<T>(T value)
@@ -92,41 +92,41 @@ public
 		}
 	}
 
-	public char ToChar(byte[] arr) => BitConverter.ToChar(InverseConverter.fullInverse(arr), 0);
+	public char ToChar(byte[] arr) => BitConverter.ToChar(fullInverse(arr), 0);
 
-	public char ToChar(byte[] arr, int offset) => BitConverter.ToChar(InverseConverter.fullInverse(arr), offset);
+	public char ToChar(byte[] arr, int offset) => BitConverter.ToChar(fullInverse(arr), offset);
 
-	public double ToDouble(byte[] arr) => BitConverter.ToDouble(InverseConverter.fullInverse(arr), 0);
+	public double ToDouble(byte[] arr) => BitConverter.ToDouble(fullInverse(arr), 0);
 
-	public double ToDouble(byte[] arr, int offset) => BitConverter.ToDouble(InverseConverter.fullInverse(arr), offset);
+	public double ToDouble(byte[] arr, int offset) => BitConverter.ToDouble(fullInverse(arr), offset);
 
-	public short ToInt16(byte[] arr) => BitConverter.ToInt16(InverseConverter.fullInverse(arr), 0);
+	public short ToInt16(byte[] arr) => BitConverter.ToInt16(fullInverse(arr), 0);
 
-	public short ToInt16(byte[] arr, int offset) => BitConverter.ToInt16(InverseConverter.fullInverse(arr), offset);
+	public short ToInt16(byte[] arr, int offset) => BitConverter.ToInt16(fullInverse(arr), offset);
 
-	public int ToInt32(byte[] arr) => BitConverter.ToInt32(InverseConverter.fullInverse(arr), 0);
+	public int ToInt32(byte[] arr) => BitConverter.ToInt32(fullInverse(arr), 0);
 
-	public int ToInt32(byte[] arr, int offset) => BitConverter.ToInt32(InverseConverter.fullInverse(arr), offset);
+	public int ToInt32(byte[] arr, int offset) => BitConverter.ToInt32(fullInverse(arr), offset);
 
-	public long ToInt64(byte[] arr) => BitConverter.ToInt64(InverseConverter.fullInverse(arr), 0);
+	public long ToInt64(byte[] arr) => BitConverter.ToInt64(fullInverse(arr), 0);
 
-	public long ToInt64(byte[] arr, int offset) => BitConverter.ToInt64(InverseConverter.fullInverse(arr), offset);
+	public long ToInt64(byte[] arr, int offset) => BitConverter.ToInt64(fullInverse(arr), offset);
 
-	public float ToSingle(byte[] arr) => BitConverter.ToSingle(InverseConverter.fullInverse(arr), 0);
+	public float ToSingle(byte[] arr) => BitConverter.ToSingle(fullInverse(arr), 0);
 
-	public float ToSingle(byte[] arr, int offset) => BitConverter.ToSingle(InverseConverter.fullInverse(arr), offset);
+	public float ToSingle(byte[] arr, int offset) => BitConverter.ToSingle(fullInverse(arr), offset);
 
-	public ushort ToUInt16(byte[] arr) => BitConverter.ToUInt16(InverseConverter.fullInverse(arr), 0);
+	public ushort ToUInt16(byte[] arr) => BitConverter.ToUInt16(fullInverse(arr), 0);
 
-	public ushort ToUInt16(byte[] arr, int offset) => BitConverter.ToUInt16(InverseConverter.fullInverse(arr), offset);
+	public ushort ToUInt16(byte[] arr, int offset) => BitConverter.ToUInt16(fullInverse(arr), offset);
 
-	public uint ToUInt32(byte[] arr) => BitConverter.ToUInt32(InverseConverter.fullInverse(arr), 0);
+	public uint ToUInt32(byte[] arr) => BitConverter.ToUInt32(fullInverse(arr), 0);
 
-	public uint ToUInt32(byte[] arr, int offset) => BitConverter.ToUInt32(InverseConverter.fullInverse(arr), offset);
+	public uint ToUInt32(byte[] arr, int offset) => BitConverter.ToUInt32(fullInverse(arr), offset);
 
-	public ulong ToUInt64(byte[] arr) => BitConverter.ToUInt64(InverseConverter.fullInverse(arr), 0);
+	public ulong ToUInt64(byte[] arr) => BitConverter.ToUInt64(fullInverse(arr), 0);
 
-	public ulong ToUInt64(byte[] arr, int offset) => BitConverter.ToUInt64(InverseConverter.fullInverse(arr), offset);
+	public ulong ToUInt64(byte[] arr, int offset) => BitConverter.ToUInt64(fullInverse(arr), offset);
 
 	private static byte[] fullInverse(byte[] arr)
 	{

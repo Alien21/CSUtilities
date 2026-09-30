@@ -108,8 +108,8 @@ public struct BoundingBox
 			this.Extent = BoundingBoxExtent.Finite;
 		}
 
-		this.Min = new XYZ(System.Math.Min(min.X, max.X), System.Math.Min(min.Y, max.Y), System.Math.Min(min.Z, max.Z));
-		this.Max = new XYZ(System.Math.Max(min.X, max.X), System.Math.Max(min.Y, max.Y), System.Math.Max(min.Z, max.Z));
+		this.Min = new XYZ(Math.Min(min.X, max.X), Math.Min(min.Y, max.Y), Math.Min(min.Z, max.Z));
+		this.Max = new XYZ(Math.Max(min.X, max.X), Math.Max(min.Y, max.Y), Math.Max(min.Z, max.Z));
 	}
 
 	/// <summary>
@@ -171,7 +171,7 @@ public struct BoundingBox
 	/// <returns>The merged box.</returns>
 	public static BoundingBox Merge(IEnumerable<BoundingBox> boxes)
 	{
-		BoundingBox b = BoundingBox.Null;
+		BoundingBox b = Null;
 
 		foreach (var box in boxes)
 		{
@@ -237,7 +237,7 @@ public struct BoundingBox
 		if (this.Extent == BoundingBoxExtent.Infinite
 			|| box.Extent == BoundingBoxExtent.Infinite)
 		{
-			return BoundingBox.Infinite;
+			return Infinite;
 		}
 		else if (this.Extent == BoundingBoxExtent.Null)
 		{
@@ -249,13 +249,13 @@ public struct BoundingBox
 		}
 
 		var min = new XYZ(
-			System.Math.Min(this.Min.X, box.Min.X),
-			System.Math.Min(this.Min.Y, box.Min.Y),
-			System.Math.Min(this.Min.Z, box.Min.Z));
+			Math.Min(this.Min.X, box.Min.X),
+			Math.Min(this.Min.Y, box.Min.Y),
+			Math.Min(this.Min.Z, box.Min.Z));
 		var max = new XYZ(
-			System.Math.Max(this.Max.X, box.Max.X),
-			System.Math.Max(this.Max.Y, box.Max.Y),
-			System.Math.Max(this.Max.Z, box.Max.Z));
+			Math.Max(this.Max.X, box.Max.X),
+			Math.Max(this.Max.Y, box.Max.Y),
+			Math.Max(this.Max.Z, box.Max.Z));
 
 		return new BoundingBox(min, max);
 	}

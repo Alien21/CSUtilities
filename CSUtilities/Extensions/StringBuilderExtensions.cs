@@ -1,7 +1,5 @@
 #nullable enable annotations
 
-using System.Linq;
-
 namespace CSUtilities.Extensions;
 
 /// <summary>

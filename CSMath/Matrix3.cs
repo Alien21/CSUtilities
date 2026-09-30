@@ -112,7 +112,7 @@ public partial struct Matrix3
 
 		if (zAxis.Equals(XYZ.AxisZ))
 		{
-			return Matrix3.Identity;
+			return Identity;
 		}
 
 		XYZ wY = XYZ.AxisY;

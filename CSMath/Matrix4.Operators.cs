@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace CSMath;
 
@@ -42,7 +41,7 @@ public partial struct Matrix4
 	/// <returns>A new instance containing the result.</returns>
 	public static Matrix4 operator *(Matrix4 a, Matrix4 b)
 	{
-		return Matrix4.Multiply(a, b);
+		return Multiply(a, b);
 	}
 
 	/// <summary>Multiply the matrix and a coordinate</summary>

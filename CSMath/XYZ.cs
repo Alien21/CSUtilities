@@ -80,7 +80,7 @@ public partial struct XYZ : IVector, IEquatable<XYZ>
 		XYZ b = point3.Subtract(point1);
 
 		// N = Cross(a, b)
-		XYZ n = XYZ.Cross(a, b);
+		XYZ n = Cross(a, b);
 		XYZ normal = n.Normalize();
 
 		return normal;

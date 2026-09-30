@@ -17,7 +17,7 @@ static class ObjectExtensions
 		if (parameter != null)
 			return;
 
-		throw new System.ArgumentNullException();
+		throw new ArgumentNullException();
 	}
 
 	public static void ThrowIfNull(this object parameter, string paramName)
@@ -25,7 +25,7 @@ static class ObjectExtensions
 		if (parameter != null)
 			return;
 
-		throw new System.ArgumentNullException(paramName);
+		throw new ArgumentNullException(paramName);
 	}
 
 	public static void ThrowIfNull(this object parameter, string paramName, string message)
@@ -33,7 +33,7 @@ static class ObjectExtensions
 		if (parameter != null)
 			return;
 
-		throw new System.ArgumentNullException(paramName, message);
+		throw new ArgumentNullException(paramName, message);
 	}
 
 	public static void ThrowIf<T, E>(this T parameter, Check<T> check)

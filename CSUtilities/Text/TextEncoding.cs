@@ -13,7 +13,7 @@ internal partial class TextEncoding : Encoding
 		switch (code)
 		{
 			case Text.CodePage.Unknown:
-				return Encoding.Default;
+				return Default;
 			case Text.CodePage.Ibm037:
 				break;
 			case Text.CodePage.Ibm437:
@@ -97,7 +97,7 @@ internal partial class TextEncoding : Encoding
 			case Text.CodePage.Windows1251:
 				break;
 			case Text.CodePage.Windows1252:
-				return TextEncoding.Windows1252();
+				return Windows1252();
 			case Text.CodePage.Windows1253:
 				break;
 			case Text.CodePage.Windows1254:
@@ -169,7 +169,7 @@ internal partial class TextEncoding : Encoding
 			case Text.CodePage.XIA5Norwegian:
 				break;
 			case Text.CodePage.Usascii:
-				return Encoding.ASCII;
+				return ASCII;
 			case Text.CodePage.Xcp20261:
 				break;
 			case Text.CodePage.Xcp20269:
@@ -289,12 +289,12 @@ internal partial class TextEncoding : Encoding
 			case Text.CodePage.Utf7:
 				// Preserve the encoding of explicitly tagged legacy CAD data; this is not the default encoding.
 #pragma warning disable SYSLIB0001
-				return Encoding.UTF7;
+				return UTF7;
 #pragma warning restore SYSLIB0001
 			case Text.CodePage.Utf8:
-				return Encoding.UTF8;
+				return UTF8;
 			default:
-				return Encoding.Default;
+				return Default;
 		}
 
 		return null;
